@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GAZON MARKETPLACE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+            background-color: rgb(217, 172, 223);
+            margin: 0;
+            font-family: "Nunito", sans-serif;
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 250px;
+            gap: 15px;
+            padding: 15px;
+            background-image: url(https://gazon.info/wp-content/uploads/2016/02/2-3.jpg);
+            background-size: cover;
+            border: 1px solid blueviolet;
+            border-radius: 10px;
+        }
+
+        .logo-title-block {
+            display: flex;
+            justify-content: center;
+            font-size: clamp(16px, 4vw, 30px);
+            font-weight: bold;
+            background: rgb(18, 172, 64);
+            border: 4px solid rgb(6, 94, 20);
+            border-radius: 5px;
+            color: rgb(3, 73, 18);
+            padding: 10px;
+            box-shadow: 0 0 10px rgb(58, 66, 60);
+        }
+
+        
+
+        .article-main {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(105, 172, 116);
+            text-align: center;
+            padding: 10px;
+        }
+
+        .dark-theme .article-main {
+            background-color: #075204;
+            color: white;
+        }
+
+        .main-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .block {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            align-items: center;
+            gap: 15px;
+            background: rgb(6, 94, 20);
+            border-radius: 12px;
+            border: 2px solid violet;
+            padding: 15px;
+        }
+
+        .block img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .block p {
+            margin: 0 0 10px 0;
+            color: white;
+        }
+
+        .button-to-buy {
+            background-color: rgb(15, 199, 45);
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            box-shadow: 0 0 10px rgb(44, 38, 38);
+        }
+
+        .button-to-buy:hover {
+            background-color: rgb(11, 112, 28);
+            transform: scale(0.96);
+        }
+
+        .aside-ad {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgb(255, 19, 19);
+            border: 2px solid blueviolet;
+            border-radius: 13px;
+            color: whitesmoke;
+            font-family: "Nunito", sans-serif;
+            font-size: clamp(16px, 4vw, 30px);
+            box-shadow: 0 0 15px rgb(51, 45, 45);
+            padding: 20px;
+            min-height: 200px;
+            text-align: center;
+        }
+
+        .block-reviews {
+            background: rgb(82, 183, 241);
+            border-radius: 12px;
+            border: 2px solid rgb(206, 36, 141);
+            text-align: center;
+            padding: 15px;
+        }
+
+        .dark-theme .block-reviews {
+            background: rgb(5, 65, 73);
+        }
+
+        .block-reviews img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .fixed-button-tochangecolor {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            padding: 10px 20px;
+            background-color: #1aaf14;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dark-theme {
+            background-color: #420530;
+            color: #eee;
+        }
+        .dark-theme header {
+            background-color: #075204;
+            color: #fff;
+        }
+        .dark-theme button {
+            background-color: #084412;
+            color: #eee;
+        }
+        
+        .dark-theme .aside-ad {
+            background-color: #4e0505;
+            color: white;
+        }
+
+        .reviews {
+            margin-bottom: 20px;
+            padding: 0 10px;
+        }
+
+        .reviews article {
+            background: #f0f0f0;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .reviews article header {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-review {
+            max-width: 500px;
+            margin: 0 auto 30px auto;
+            padding: 10px;
+            background: #eee;
+            border-radius: 10px;
+        }
+
+        .dark-theme .form-review {
+            background-color: rgb(39, 38, 38);
+            color: white
+        }
+
+        .dark-theme .logo-title-block {
+            background-color: #084412;
+            color: white;
+        }
+
+        .form-review h3 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .form-review input,
+        .form-review textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border: 1px solid #999;
+            font-family: "Nunito", sans-serif;
+            font-size: 14px;
+        }
+
+        .form-review textarea {
+            min-height: 80px;
+        }
+
+        .form-review button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            font-family: "Nunito", sans-serif;
+            background-color: rgb(15, 199, 45);
+            color: rgb(2, 1, 1);
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        
+        .dark-theme .form-review button {
+            background-color: #075204;
+            color: white;
+        }
+
+        .form-review button:hover {
+            background-color: rgb(11, 112, 28);
+        }
+
+        @media (max-width: 800px) {
+
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .main-list {
+                grid-template-columns: 1fr;
+            }
+
+            .block {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .block img {
+                max-width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 320px) {
+
+            .logo-title-block {
+                font-size: clamp(16px, 6vw, 24px);
+                padding: 5px;
+            }
+
+            .block {
+                padding: 10px;
+                gap: 10px;
+            }
+
+            .button-to-buy {
+                font-size: 14px;
+                padding: 8px;
+                margin-top: 8px;
+            }
+
+            .aside-ad {
+                padding: 10px;
+                gap: 10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header class="logo-title-block">
+        Gazon Marketplace
+    </header>
+
+    <button class="fixed-button-tochangecolor">
+        Сменить тему
+    </button>
+
+    <main class="content-wrapper">
+        <article class="article-main">
+
+            <p>Самая свежая трава у нас!</p>
+            <p>Покупайте прямо сейчас и получите вторую траву в подарок</p>
+
+            <article class="main-list">
+
+                <section class="block">
+                    <img src="https://gazony.com/upload/iblock/9c8/26w17c1coq5hf0osthobjlao41g74xsy/rubl4.jpg">
+                    <div>
+                        <p>Газон "Пикник-Дачный"</p>
+                        <a target="_blank" href="https://gazony.com/rulonnyj-gazon/gazon-rulonnyy-piknik-dachnyy/">
+                            <button class="button-to-buy">Купить травы</button>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="block">
+                    <img src="https://gazony.com/upload/iblock/528/jn8lpmi2tfhoe3i4yqnznszli6uw2k2a/06.jpg">
+                    <div>
+                        <p>Газон "Делюкс"</p>
+                        <a target="_blank" href="https://gazony.com/rulonnyj-gazon/gazon-rulonnyy-delyuks/">
+                            <button class="button-to-buy">Купить травы</button>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="block">
+                    <img src="https://gazony.com/upload/iblock/3d6/xe8y9kbc9gt7kxmbxigz07cdfrpfhgfy/gazon-rulonniy-deluxe-3.jpg">
+                    <div>
+                        <p>Газон "Спортивный"</p>
+                        <a target="_blank" href="https://gazony.com/rulonnyj-gazon/gazon-rulonnyy-sportivnyy/">
+                            <button class="button-to-buy">Купить травы</button>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="block">
+                    <img src="https://gazony.com/upload/iblock/c58/c8zt0o6by74gn15dpjwb6mmfpnxckkbt/Maj-2021-5.jpg">
+                    <div>
+                        <p>Газон "Эталон"</p>
+                        <a target="_blank" href="https://gazony.com/rulonnyj-gazon/gazon-rulonnyy-etalon/">
+                            <button class="button-to-buy">Купить травы</button>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="block">
+                    <img src="https://greenturf.ru/files/gallery/59/medium/premium-grin_1613739332_1646223812.jpg" alt="грибов наелся? чё не грузит то">
+                    <div>
+                        <p>Газон "Премиум Грин"</p>
+                        <a target="_blank" href="https://greenturf.ru/rulonnye-gazony/premium-grin/">
+                            <button class="button-to-buy">Купить травы</button>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="block">
+                    <img src="https://greenturf.ru/files/gallery/152/big/parternyj_1648466168.jpg" alt="грибов наелся? чё не грузит то">
+                    <div>
+                        <p>Газон "Партерный газон (Де-люкс)"</p>
+                        <a target="_blank" href="https://greenturf.ru/rulonnye-gazony/parternyj-de-lyuks/">
+                            <button class="button-to-buy">Купить травы</button>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="block">
+                    <img src="https://greenturf.ru/files/gallery/162/big/1_1614757064_1646314519.jpg" alt="грибов наелся? чё не грузит то">
+                    <div>
+                        <p>Рулонный газон «под ключ»</p>
+                        <a target="_blank" href="hhttps://greenturf.ru/rulonnye-gazony/rulonnyj-gazon-pod-klyuch/">
+                            <button class="button-to-buy">Купить травы</button>
+                        </a>
+                    </div>
+                </section>
+            </article>
+            <h2>Отзывы наших клиентов</h2>
+            
+            <block class="block-reviews" id="reviewsContainer"></block>
+
+            <form class="form-review" id="reviewForm">
+                <h3>Добавить отзыв</h3>
+                <input type="text" id="reviewName" placeholder="Ваше имя">
+                <textarea id="reviewText" placeholder="Ваш отзыв"></textarea>
+                <input type="file" id="reviewImage" accept="image/*">
+                <button id="addReviewBtn">Добавить отзыв</button>
+            </form>
+        </article>
+
+        <aside class="aside-ad">
+
+            <p>
+                Хочешь взрывных ощущений? попробуй наш блок питания для компьютера
+            </p>
+            <a class="a"target="_blank" href="https://www.dns-shop.ru/product/19e57a5a0c913330/blok-pitania-aerocool-kcas-plus-600w-kcas-600-plus-cernyj/?utm_medium=organic&utm_source=google&utm_referrer=https%3A%2F%2Fwww.google.com%2F">
+                    <button class="button-to-buy">
+                        Перейти
+                    </button>
+            </a>
+            <p>
+                Покупайте оперативку! Самые дешёвые цены
+            </p>
+            <a class="a"target="_blank" href="https://www.dns-shop.ru/product/237d7f7462c0d9cb/operativnaa-pamat-gskill-trident-z5-neo-rgb-f5-6000j3644d64gx4-tz5nr-256-gb/">
+                    <button class="button-to-buy">
+                        Перейти
+                    </button>
+            </a>
+            <p>
+                Хотите найти чистую и невинную преданную девушку? Заходите сюда
+            </p>
+            <a class="a"target="_blank" href="https://onlyfans.com/">
+                    <button class="button-to-buy">
+                        Перейти
+                    </button>
+            </a>
+            <p>
+                Хотите грибов?
+            </p>
+            <a class="a"target="_blank" href="https://www.youtube.com/@EeOneGuy">
+                    <button class="button-to-buy">
+                        Перейти*
+                    </button>
+            </a>
+            <p>
+                Хотите чистый кремний?
+            </p>
+            <a class="a"target="_blank" href="https://ochv.ru/magazin/product/monokristally-kremniya-kuski">
+                <button class="button-to-buy">
+                        Перейти
+                    </button>
+            </a>
+            Хотите поиграть в игрушки? Ностальгия обеспечена
+                <select class="redirect-selector" onchange="if(this.value=='yes')window.open('https://emupedia.net/beta/emuos/', '_blank');this.value=''">
+                    <option>Хотите ли вы?</option>
+                    <option value="yes">Да</option>
+                    <option value="no">Нет</option>
+                </select>
+        </aside>
+        
+
+    </main>
+    
+
+    <footer>
+        <button class="button-to-buy" onclick="window.scrollTo({top:0, behavior:'smooth'})">Наверх</button>
+        <p>* Данный видеоблогер находится в списке иноагентов РФ</p>
+    </footer>
+
+    <script src="cookie.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
