@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Колода Европы</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="logo">Колода Европы</h1>
+      <nav class="header-nav">
+        <button id="toggle-edit" class="btn-edit">Режим редактирования</button>
+        <button id="btn-add" class="btn-add hidden">+ Добавить карту</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app">
+    <section class="filter-bar">
+      <button class="filter-btn active" data-region="all">Все</button>
+      <button class="filter-btn" data-region="Восточная Европа">Восток</button>
+      <button class="filter-btn" data-region="Западная Европа">Запад</button>
+      <button class="filter-btn" data-region="Северная Европа">Север</button>
+      <button class="filter-btn" data-region="Южная Европа">Юг</button>
+    </section>
+    <section id="cards-container" class="cards-grid"></section>
+  </main>
+
+  <dialog id="card-dialog" class="card-dialog">
+    <form id="card-form" class="card-form">
+      <h2 id="dialog-title">Новая карта</h2>
+      <label>Страна <input type="text" name="name" required /></label>
+      <label>Флаг (эмодзи) <input type="text" name="flag" placeholder="🇩🇪" required /></label>
+      <label>Регион
+        <select name="region" required>
+          <option value="Восточная Европа">Восточная Европа</option>
+          <option value="Западная Европа">Западная Европа</option>
+          <option value="Северная Европа">Северная Европа</option>
+          <option value="Южная Европа">Южная Европа</option>
+        </select>
+      </label>
+      <label>Безопасность (1-10) <input type="number" name="safety" min="1" max="10" required /></label>
+      <label>Уровень жизни (1-10) <input type="number" name="living" min="1" max="10" required /></label>
+      <label>Зарплата (1-10) <input type="number" name="salary" min="1" max="10" required /></label>
+      <label>Природа (1-10) <input type="number" name="nature" min="1" max="10" required /></label>
+      <label>История (1-10) <input type="number" name="history" min="1" max="10" required /></label>
+      <div class="dialog-actions">
+        <button type="submit" class="btn-save">Сохранить</button>
+        <button type="button" id="btn-cancel" class="btn-cancel">Отмена</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
