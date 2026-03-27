@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Steam Stats (ОФИЦИАЛЬНО)</title>
+    <link rel="stylesheet" href="Lab6_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    STEAM STATS
+</header>
+
+<div class="ad-top">
+     КУПИ СКИНЫ СО СКИДКОЙ 90% 
+</div>
+<nav>
+<nav>
+    <button onclick="loadSteamGames()">Игры Steam</button>
+    <button onclick="loadRandomDog()">Случайная собака Гейба</button>
+    <button onclick="showAddGameForm()">Добавить игру</button>
+    <button onclick="showUpdateGameForm()">Обновить игру</button>
+    <button onclick="showDeleteGameForm()">Удалить игру</button>
+</nav>
+
+<section id="content">
+    <h2>Нажмите кнопку для работы с API</h2>
+</section>
+
+<aside class="ad-side">
+    <div class="ad-wrapper">
+        <div class="ad-container">
+            <button class="ad-button" onclick="window.open('https://lis-skins.com/', '_blank')">СКИНЫ CS2 ЗА КОПЕЙКИ</button>
+            <button class="ad-button" onclick="window.open('https://plg.bet/bets', '_blank')">КАЗИНО ДЛЯ ГЕЙМЕРОВ</button>
+            <button class="ad-button" onclick="window.open('http://csgetto.gold/', '_blank')">КРУТИ И ВЫИГРЫВАЙ</button>
+            <button class="ad-button" onclick="window.open('https://funpay.com/lots/82/', '_blank')">ДОТА 2 БУСТ</button>
+            <button class="ad-button" onclick="window.open('https://ggsel.net/', '_blank')">ИГРЫ ДЕШЕВЛЕ</button>
+            <button class="ad-button" onclick="window.open('https://ru14.bongacams.com/', '_blank')">ИМБА САЙТ</button>
+            <button class="ad-button" onclick="window.open('https://ggsel.net/catalog/steam-accounts', '_blank')">АККАУНТЫ ДЁШЕВО</button>
+            <button class="ad-button" onclick="window.open('https://ggsel.net/catalog/steam-keys', '_blank')">КЛЮЧИ ОПТОМ</button>
+            <button class="ad-button" onclick="window.open('https://playerok.com/products/661534349874-furri-drug-i-otchim-na-chas', '_blank')">ФУРРИ ДРУГ НА ЧАС</button>
+            <button class="ad-button" onclick="window.open('https://lis-skins.com/', '_blank')">СКИНЫ CS2 ЗА КОПЕЙКИ</button>
+            <button class="ad-button" onclick="window.open('https://plg.bet/bets', '_blank')">КАЗИНО ДЛЯ ГЕЙМЕРОВ</button>
+            <button class="ad-button" onclick="window.open('http://csgetto.gold/', '_blank')">КРУТИ И ВЫИГРЫВАЙ</button>
+            <button class="ad-button" onclick="window.open('https://funpay.com/lots/82/', '_blank')">ДОТА 2 БУСТ</button>
+            <button class="ad-button" onclick="window.open('https://ggsel.net/', '_blank')">ИГРЫ ДЕШЕВЛЕ</button>
+            <button class="ad-button" onclick="window.open('https://ru14.bongacams.com/', '_blank')">ИМБА САЙТ</button>
+            <button class="ad-button" onclick="window.open('https://ggsel.net/catalog/steam-accounts', '_blank')">АККАУНТЫ ДЁШЕВО</button>
+            <button class="ad-button" onclick="window.open('https://ggsel.net/catalog/steam-keys', '_blank')">КЛЮЧИ ОПТОМ</button>
+            <button class="ad-button" onclick="window.open('https://playerok.com/products/661534349874-furri-drug-i-otchim-na-chas', '_blank')">ФУРРИ ДРУГ НА ЧАС</button>
+            <button class="ad-button" onclick="window.open('https://lis-skins.com/', '_blank')">СКИНЫ CS2 ЗА КОПЕЙКИ</button>
+            <button class="ad-button" onclick="window.open('https://plg.bet/bets', '_blank')">КАЗИНО ДЛЯ ГЕЙМЕРОВ</button>
+            <button class="ad-button" onclick="window.open('http://csgetto.gold/', '_blank')">КРУТИ И ВЫИГРЫВАЙ</button>
+            <button class="ad-button" onclick="window.open('https://funpay.com/lots/82/', '_blank')">ДОТА 2 БУСТ</button>
+            <button class="ad-button" onclick="window.open('https://ggsel.net/', '_blank')">ИГРЫ ДЕШЕВЛЕ</button>
+            <button class="ad-button" onclick="window.open('https://ru14.bongacams.com/', '_blank')">ИМБА САЙТ</button>
+            <button class="ad-button" onclick="window.open('https://ggsel.net/catalog/steam-accounts', '_blank')">АККАУНТЫ ДЁШЕВО</button>
+            <button class="ad-button" onclick="window.open('https://ggsel.net/catalog/steam-keys', '_blank')">КЛЮЧИ ОПТОМ</button>
+            <button class="ad-button" onclick="window.open('https://playerok.com/products/661534349874-furri-drug-i-otchim-na-chas', '_blank')">ФУРРИ ДРУГ НА ЧАС</button>
+            <button class="ad-button" onclick="window.open('https://lis-skins.com/', '_blank')">СКИНЫ CS2 ЗА КОПЕЙКИ</button>
+            <button class="ad-button" onclick="window.open('https://plg.bet/bets', '_blank')">КАЗИНО ДЛЯ ГЕЙМЕРОВ</button>
+            <button class="ad-button" onclick="window.open('http://csgetto.gold/', '_blank')">КРУТИ И ВЫИГРЫВАЙ</button>
+            <button class="ad-button" onclick="window.open('https://funpay.com/lots/82/', '_blank')">ДОТА 2 БУСТ</button>
+            <button class="ad-button" onclick="window.open('https://ggsel.net/', '_blank')">ИГРЫ ДЕШЕВЛЕ</button>
+            <button class="ad-button" onclick="window.open('https://ru14.bongacams.com/', '_blank')">ИМБА САЙТ</button>
+            <button class="ad-button" onclick="window.open('https://ggsel.net/catalog/steam-accounts', '_blank')">АККАУНТЫ ДЁШЕВО</button>
+            <button class="ad-button" onclick="window.open('https://ggsel.net/catalog/steam-keys', '_blank')">КЛЮЧИ ОПТОМ</button>
+            <button class="ad-button" onclick="window.open('https://playerok.com/products/661534349874-furri-drug-i-otchim-na-chas', '_blank')">ФУРРИ ДРУГ НА ЧАС</button>
+        </div>
+    </div>
+</aside>
+
+<footer>
+    Это официальный сайт Steam, отвечаю
+</footer>
+
+<script src="Lab6_script.js"></script>
+
+</body>
+</html>
