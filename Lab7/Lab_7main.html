@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Steam Stats (ОФИЦИАЛЬНО)</title>
+    <link rel="stylesheet" href="Lab7_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="app">
+    <header>
+        STEAM STATS
+    </header>
+
+    <div class="ad-top">
+         КУПИ СКИНЫ СО СКИДКОЙ 90% 
+    </div>
+
+    <nav>
+        <button @click="currentPage = 'steam-games'">Игры Steam</button>
+        <button @click="currentPage = 'random-dog'">Случайная собака Гейба</button>
+        <button @click="currentPage = 'add-message'">Написать Гейбу</button>
+        <button @click="currentPage = 'update-message'">Исправить послание Гейбу</button>
+        <button @click="currentPage = 'delete-message'">Отозвать письмо у Гейба</button>
+        <button @click="currentPage = 'messages'">Письма</button>
+    </nav>
+
+    <section id="content">
+        <component :is="currentComponent"></component>
+    </section>
+
+    <aside class="ad-side">
+        <div class="ad-wrapper">
+            <div class="ad-container">
+                <button v-for="ad in ads" :key="ad.url" class="ad-button" @click="openAd(ad.url)">
+                    {{ ad.text }}
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <footer>
+        Это официальный сайт Steam, отвечаю
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+<script src="https://unpkg.com/vuex@3.6.2/dist/vuex.js"></script>
+<script src="Lab7_vue.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+{
+  "games": [
+    {
+      "name": "Counter-Strike 2",
+      "ccu": 616370,
+      "peak_ccu": 1717624,
+      "owners": "100,000,000+"
+    },
+    {
+      "name": "Dota 2",
+      "ccu": 272200,
+      "peak_ccu": 859016,
+      "owners": "50,000,000+"
+    },
+    {
+      "name": "Slay the Spire 2",
+      "ccu": 199543,
+      "peak_ccu": 574638,
+      "owners": "5,000,000+"
+    },
+    {
+      "name": "PUBG: BATTLEGROUNDS",
+      "ccu": 149872,
+      "peak_ccu": 1290870,
+      "owners": "75,000,000+"
+    },
+    {
+      "name": "Crimson Desert",
+      "ccu": 130125,
+      "peak_ccu": 247340,
+      "owners": "5,000,000+"
+    },
+    {
+      "name": "FiveM",
+      "ccu": 105939,
+      "peak_ccu": 200892,
+      "owners": "10,000,000+"
+    },
+    {
+      "name": "Marvel Rivals",
+      "ccu": 103198,
+      "peak_ccu": 141041,
+      "owners": "5,000,000+"
+    },
+    {
+      "name": "ARC Raiders",
+      "ccu": 89281,
+      "peak_ccu": 250148,
+      "owners": "2,000,000+"
+    },
+    {
+      "name": "Bongo Cat",
+      "ccu": 82746,
+      "peak_ccu": 173349,
+      "owners": "2,000,000+"
+    },
+    {
+      "name": "Apex Legends",
+      "ccu": 80697,
+      "peak_ccu": 281161,
+      "owners": "50,000,000+"
+    },
+    {
+      "name": "Tom Clancy's Rainbow Six Siege",
+      "ccu": 75288,
+      "peak_ccu": 138483,
+      "owners": "30,000,000+"
+    },
+    {
+      "name": "Rust",
+      "ccu": 68817,
+      "peak_ccu": 200309,
+      "owners": "15,000,000+"
+    },
+    {
+      "name": "Stardew Valley",
+      "ccu": 65193,
+      "peak_ccu": 154063,
+      "owners": "30,000,000+"
+    },
+    {
+      "name": "Wallpaper Engine",
+      "ccu": 59801,
+      "peak_ccu": 135593,
+      "owners": "30,000,000+"
+    },
+    {
+      "name": "Overwatch",
+      "ccu": 59597,
+      "peak_ccu": 112793,
+      "owners": "10,000,000+"
+    },
+    {
+      "name": "Warframe",
+      "ccu": 58239,
+      "peak_ccu": 98923,
+      "owners": "20,000,000+"
+    },
+    {
+      "name": "Dead by Daylight",
+      "ccu": 56410,
+      "peak_ccu": 83272,
+      "owners": "15,000,000+"
+    },
+    {
+      "name": "Delta Force",
+      "ccu": 48681,
+      "peak_ccu": 168712,
+      "owners": "2,000,000+"
+    },
+    {
+      "name": "Geometry Dash",
+      "ccu": 45572,
+      "peak_ccu": 108707,
+      "owners": "10,000,000+"
+    },
+    {
+      "name": "Team Fortress 2",
+      "ccu": 45238,
+      "peak_ccu": 66670,
+      "owners": "50,000,000+"
+    },
+    {
+      "name": "HELLDIVERS 2",
+      "ccu": 43420,
+      "peak_ccu": 83024,
+      "owners": "10,000,000+"
+    },
+    {
+      "name": "VRChat",
+      "ccu": 42657,
+      "peak_ccu": 73491,
+      "owners": "10,000,000+"
+    },
+    {
+      "name": "Marathon",
+      "ccu": 39120,
+      "peak_ccu": 77358,
+      "owners": "2,000,000+"
+    },
+    {
+      "name": "Grand Theft Auto V Enhanced",
+      "ccu": 38626,
+      "peak_ccu": 95561,
+      "owners": "15,000,000+"
+    },
+    {
+      "name": "Baldur's Gate 3",
+      "ccu": 38515,
+      "peak_ccu": 85713,
+      "owners": "10,000,000+"
+    },
+    {
+      "name": "The Finals",
+      "ccu": 38102,
+      "peak_ccu": 148233,
+      "owners": "5,000,000+"
+    },
+    {
+      "name": "Palworld",
+      "ccu": 37540,
+      "peak_ccu": 210246,
+      "owners": "15,000,000+"
+    },
+    {
+      "name": "ARK: Survival Ascended",
+      "ccu": 37116,
+      "peak_ccu": 124965,
+      "owners": "5,000,000+"
+    },
+    {
+      "name": "EA SPORTS FC 25",
+      "ccu": 36025,
+      "peak_ccu": 103829,
+      "owners": "5,000,000+"
+    },
+    {
+      "name": "Path of Exile",
+      "ccu": 35102,
+      "peak_ccu": 158922,
+      "owners": "10,000,000+"
+    },
+    {
+      "name": "Fallout 4",
+      "ccu": 34750,
+      "peak_ccu": 115203,
+      "owners": "20,000,000+"
+    },
+    {
+      "name": "PAYDAY 2",
+      "ccu": 33410,
+      "peak_ccu": 93752,
+      "owners": "15,000,000+"
+    },
+    {
+      "name": "Lethal Company",
+      "ccu": 32875,
+      "peak_ccu": 196783,
+      "owners": "10,000,000+"
+    },
+    {
+      "name": "Monster Hunter: World",
+      "ccu": 32110,
+      "peak_ccu": 133659,
+      "owners": "20,000,000+"
+    },
+    {
+      "name": "Elden Ring",
+      "ccu": 31785,
+      "peak_ccu": 95382,
+      "owners": "20,000,000+"
+    },
+    {
+      "name": "Destiny 2",
+      "ccu": 30925,
+      "peak_ccu": 118245,
+      "owners": "10,000,000+"
+    },
+    {
+      "name": "Terraria",
+      "ccu": 30210,
+      "peak_ccu": 86079,
+      "owners": "50,000,000+"
+    },
+    {
+      "name": "The Elder Scrolls V: Skyrim Special Edition",
+      "ccu": 29780,
+      "peak_ccu": 79605,
+      "owners": "20,000,000+"
+    },
+    {
+      "name": "Sea of Thieves",
+      "ccu": 29150,
+      "peak_ccu": 91324,
+      "owners": "10,000,000+"
+    },
+    {
+      "name": "Lost Ark",
+      "ccu": 28540,
+      "peak_ccu": 119553,
+      "owners": "10,000,000+"
+    }
+  ]
+}

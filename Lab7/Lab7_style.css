@@ -1,0 +1,148 @@
+body {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    background: #1b2838;
+    color: #c7d5e0;
+    margin-right: 120px;
+}
+
+header {
+    background: #171a21;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+nav {
+    text-align: center;
+    padding: 10px;
+    background: #2a475e;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background: #66c0f4;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+}
+
+button:hover {
+    background: #8fd3ff;
+}
+
+#content {
+    padding: 20px;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #2a475e;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #171a21;
+}
+
+.ad-top {
+    background: red;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+aside.ad-side {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 120px;
+    height: 100vh;
+    overflow: hidden;
+    background: #0d1117;
+    border-left: 2px solid #ff4444;
+    z-index: 1000;
+}
+
+aside.ad-side .ad-wrapper {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+aside.ad-side .ad-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: scroll-up 40s linear infinite;
+    display: flex;
+    flex-direction: column;
+}
+
+aside.ad-side:hover .ad-container {
+    animation-play-state: paused;
+}
+
+aside.ad-side .ad-button {
+    display: block;
+    padding: 12px 6px;
+    margin: 0;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid #2a2a2a;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-family: "Nunito", sans-serif;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #2a2a2a;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+aside.ad-side .ad-button:hover {
+    filter: brightness(1.2);
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+aside.ad-side .ad-button:nth-child(odd) {
+    background: linear-gradient(135deg, #1a0000, #2a0000);
+    color: #ff6666;
+}
+
+aside.ad-side .ad-button:nth-child(even) {
+    background: linear-gradient(135deg, #1a1200, #2a2000);
+    color: #ffcc44;
+}
+
+@keyframes scroll-up {
+    0% { 
+        transform: translateY(0);
+    }
+    100% { 
+        transform: translateY(-50%);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #171a21;
+    margin-top: 20px;
+}
