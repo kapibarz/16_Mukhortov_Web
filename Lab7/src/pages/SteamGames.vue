@@ -1,26 +1,33 @@
 <template>
   <div>
-    <h2>Игры</h2>
-
-    <div v-if="store.loading">Загрузка...</div>
-
-    <table v-if="store.games.length">
-      <tr v-for="(g, i) in store.games" :key="i">
-        <td>{{ i+1 }}</td>
-        <td>{{ g.name }}</td>
-        <td>{{ g.ccu }}</td>
-      </tr>
+    <h2>Топ игр Steam</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Игра</th>
+          <th>Онлайн</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(game, i) in games" :key="i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ game.name }}</td>
+          <td>{{ game.ccu }}</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
-import { useGamesStore } from '../store/games'
+import { ref, onMounted } from 'vue'
 
-const store = useGamesStore()
+const games = ref([])
 
-onMounted(() => {
-  store.fetchGames()
+onMounted(async () => {
+  const res = await fetch('/games.json')
+  const data = await res.json()
+  games.value = data.games.sort((a,b)=>b.ccu-a.ccu)
 })
 </script>

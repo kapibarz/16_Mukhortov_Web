@@ -1,18 +1,12 @@
 <template>
   <div>
-    <h2>Собака</h2>
-    <button @click="store.fetchDog()">Обновить</button>
-    <img :src="store.image" v-if="store.image" />
+    <h2>Собака Гейба</h2>
+    <img :src="data.message" style="max-width:100%">
+    <br>
+    <button @click="$emit('reloadDog')">Ещё собаку</button>
   </div>
 </template>
 
 <script setup>
-import { useDogStore } from '../store/dog'
-import { onMounted } from 'vue'
-
-const store = useDogStore()
-
-onMounted(() => {
-  store.fetchDog()
-})
+defineProps(['data'])
 </script>

@@ -1,20 +1,24 @@
 <template>
   <div>
-    <h2>Письма</h2>
+    <h2>Все письма</h2>
 
-    <div v-for="m in store.messages" :key="m.id">
-      {{ m.title }} - {{ m.body }}
+    <div v-for="msg in data" :key="msg.id" style="border:1px solid #ccc; margin:10px; padding:10px">
+      <b>ID:</b> {{ msg.id }} <br>
+      <b>Тема:</b> {{ msg.title }} <br>
+      <b>Текст:</b> {{ msg.body }} <br>
+
+      <button @click="deleteMsg(msg.id)">Удалить</button>
     </div>
   </div>
 </template>
 
 <script setup>
-import { useMessagesStore } from '../store/messages'
-import { onMounted } from 'vue'
+const props = defineProps(['data'])
 
-const store = useMessagesStore()
+const API_URL = "https://69c7ffd063393440b317571e.mockapi.io/gabe/mail/incoming_messages/gabe_mail"
 
-onMounted(() => {
-  store.fetchMessages()
-})
+async function deleteMsg(id){
+  await fetch(API_URL + '/' + id, { method:'DELETE' })
+  location.reload()
+}
 </script>
